@@ -1,0 +1,50 @@
+.trip-id-tag {
+  display: inline-flex;
+  padding: 3px 10px;
+  background: var(--primary-bg);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.route-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.route-from, .route-to { font-weight: 500; }
+
+/* Trip Detail in Modal */
+.trip-detail-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  margin-bottom: 4px;
+}
+
+.trip-detail-city {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.trip-detail-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.trip-detail-dots {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+}

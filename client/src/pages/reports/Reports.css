@@ -1,0 +1,75 @@
+.reports-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.reports-kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reports-kpi-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  margin-bottom: 4px;
+}
+.reports-kpi-icon-primary { background: var(--primary-bg); color: var(--primary); }
+.reports-kpi-icon-success { background: var(--success-bg); color: var(--success); }
+.reports-kpi-icon-warning { background: var(--warning-bg); color: var(--warning); }
+.reports-kpi-icon-info { background: var(--info-bg); color: var(--info); }
+
+.reports-kpi-val { font-size: 1.625rem; font-weight: 700; color: var(--text-primary); }
+.reports-kpi-label { font-size: 0.8125rem; color: var(--text-secondary); }
+
+.reports-actions { display: flex; gap: 10px; }
+
+.reports-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.chart-subtitle { font-size: 0.8125rem; color: var(--text-muted); }
+
+/* Rate bar */
+.report-rate-wrap { display: flex; align-items: center; gap: 8px; }
+.report-rate-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  min-width: 80px;
+}
+.report-rate-fill {
+  height: 100%;
+  background: var(--success);
+  border-radius: var(--radius-full);
+}
+
+.text-success { color: var(--success) !important; font-weight: 500; }
+.text-danger { color: var(--danger) !important; font-weight: 500; }
+
+@media (max-width: 1200px) {
+  .reports-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .reports-charts-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .reports-kpi-grid { grid-template-columns: 1fr 1fr; }
+  .reports-actions { flex-direction: column; }
+}

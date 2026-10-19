@@ -1,0 +1,68 @@
+.fuel-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.fuel-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.fuel-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  margin-bottom: 12px;
+}
+.fuel-stat-icon-primary { background: var(--primary-bg); color: var(--primary); }
+.fuel-stat-icon-success { background: var(--success-bg); color: var(--success); }
+.fuel-stat-icon-warning { background: var(--warning-bg); color: var(--warning); }
+.fuel-stat-icon-info { background: var(--info-bg); color: var(--info); }
+
+.fuel-stat-val { font-size: 1.625rem; font-weight: 700; color: var(--text-primary); line-height: 1.1; margin-bottom: 4px; }
+.fuel-stat-label { font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 8px; }
+
+.fuel-stat-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.fuel-stat-trend.up { color: var(--success); }
+.fuel-stat-trend.down { color: var(--danger); }
+
+.fuel-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.mileage-tag {
+  display: inline-flex;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.mileage-tag.good { background: var(--success-bg); color: #15803D; }
+.mileage-tag.bad { background: var(--danger-bg); color: #B91C1C; }
+
+@media (max-width: 1200px) {
+  .fuel-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .fuel-charts { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .fuel-stats-grid { grid-template-columns: 1fr 1fr; }
+}

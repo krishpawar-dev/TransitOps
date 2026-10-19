@@ -1,0 +1,93 @@
+.expense-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.expense-summary-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.expense-summary-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  margin-bottom: 12px;
+}
+.expense-summary-icon-primary { background: var(--primary-bg); color: var(--primary); }
+.expense-summary-icon-success { background: var(--success-bg); color: var(--success); }
+.expense-summary-icon-warning { background: var(--warning-bg); color: var(--warning); }
+.expense-summary-icon-info { background: var(--info-bg); color: var(--info); }
+.expense-summary-icon-danger { background: var(--danger-bg); color: var(--danger); }
+
+.expense-summary-val {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.expense-summary-label {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.expense-charts {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.expense-pie-body {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.expense-pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 140px;
+}
+
+.expense-cat-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.expense-cat-icon {
+  width: 28px;
+  height: 28px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .expense-summary { grid-template-columns: repeat(2, 1fr); }
+  .expense-charts { grid-template-columns: 1fr; }
+  .expense-pie-body { flex-direction: column; }
+}
+@media (max-width: 640px) {
+  .expense-summary { grid-template-columns: 1fr 1fr; }
+}
